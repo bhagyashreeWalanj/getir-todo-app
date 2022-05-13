@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing ToDo Edit Modal Component should display to Edit task Modal Component 1`] = `
+<ToDoEditModal
+  EditTaskId="2"
+  handleEditTask={[MockFunction]}
+  isOpen={true}
+  onRequestClose={[MockFunction]}
+  taskName="Hello World 2"
+>
+  <div>
+    <Modal
+      ariaHideApp={false}
+      bodyOpenClassName="ReactModal__Body--open"
+      className="modalContainer"
+      closeTimeoutMS={0}
+      contentElement={[Function]}
+      isOpen={true}
+      onRequestClose={[MockFunction]}
+      overlayClassName="overlayContainer"
+      overlayElement={[Function]}
+      parentSelector={[Function]}
+      portalClassName="ReactModalPortal"
+      preventScroll={false}
+      role="dialog"
+      shouldCloseOnEsc={true}
+      shouldCloseOnOverlayClick={true}
+      shouldFocusAfterRender={true}
+      shouldReturnFocusAfterClose={true}
+    >
+      <Portal
+        containerInfo={
+          <div
+            class="ReactModalPortal"
+          >
+            <div
+              class="ReactModal__Overlay overlayContainer"
+            >
+              <div
+                aria-modal="true"
+                class="ReactModal__Content modalContainer"
+                role="dialog"
+                tabindex="-1"
+              >
+                <svg
+                  class="closeButton"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-11.414L9.172 7.757 7.757 9.172 10.586 12l-2.829 2.828 1.415 1.415L12 13.414l2.828 2.829 1.415-1.415L13.414 12l2.829-2.828-1.415-1.415L12 10.586z"
+                    />
+                  </g>
+                </svg>
+                <div>
+                  <div
+                    class="label"
+                  >
+                    <h2
+                      class="header"
+                    >
+                      Edit Task
+                    </h2>
+                  </div>
+                  <div
+                    class="NoteTypeContainer"
+                  >
+                    <input
+                      class="inputText"
+                      name="input_2"
+                      placeholder="Edit task..."
+                      type="text"
+                      value="Hello World 2"
+                    />
+                    <button
+                      class="ButtonSave"
+                    >
+                      <span>
+                        Save
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      >
+        <ModalPortal
+          ariaHideApp={false}
+          bodyOpenClassName="ReactModal__Body--open"
+          className="modalContainer"
+          closeTimeoutMS={0}
+          contentElement={[Function]}
+          defaultStyles={
+            Object {
+              "content": Object {
+                "WebkitOverflowScrolling": "touch",
+                "background": "#fff",
+                "border": "1px solid #ccc",
+                "borderRadius": "4px",
+                "bottom": "40px",
+                "left": "40px",
+                "outline": "none",
+                "overflow": "auto",
+                "padding": "20px",
+                "position": "absolute",
+                "right": "40px",
+                "top": "40px",
+              },
+              "overlay": Object {
+                "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                "bottom": 0,
+                "left": 0,
+                "position": "fixed",
+                "right": 0,
+                "top": 0,
+              },
+            }
+          }
+          isOpen={true}
+          onRequestClose={[MockFunction]}
+          overlayClassName="overlayContainer"
+          overlayElement={[Function]}
+          parentSelector={[Function]}
+          portalClassName="ReactModalPortal"
+          preventScroll={false}
+          role="dialog"
+          shouldCloseOnEsc={true}
+          shouldCloseOnOverlayClick={true}
+          shouldFocusAfterRender={true}
+          shouldReturnFocusAfterClose={true}
+          style={
+            Object {
+              "content": Object {},
+              "overlay": Object {},
+            }
+          }
+        >
+          <div
+            className="ReactModal__Overlay overlayContainer"
+            onClick={[Function]}
+            onMouseDown={[Function]}
+            style={Object {}}
+          >
+            <div
+              aria-modal={true}
+              className="ReactModal__Content modalContainer"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              onMouseUp={[Function]}
+              role="dialog"
+              style={Object {}}
+              tabIndex="-1"
+            >
+              <RiCloseCircleFill
+                className="closeButton"
+                onClick={[Function]}
+              >
+                <IconBase
+                  attr={
+                    Object {
+                      "viewBox": "0 0 24 24",
+                    }
+                  }
+                  className="closeButton"
+                  onClick={[Function]}
+                >
+                  <svg
+                    className="closeButton"
+                    fill="currentColor"
+                    height="1em"
+                    onClick={[Function]}
+                    stroke="currentColor"
+                    strokeWidth="0"
+                    style={
+                      Object {
+                        "color": undefined,
+                      }
+                    }
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      key="0"
+                    >
+                      <path
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                        key="0"
+                      />
+                      <path
+                        d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-11.414L9.172 7.757 7.757 9.172 10.586 12l-2.829 2.828 1.415 1.415L12 13.414l2.828 2.829 1.415-1.415L13.414 12l2.829-2.828-1.415-1.415L12 10.586z"
+                        key="1"
+                      />
+                    </g>
+                  </svg>
+                </IconBase>
+              </RiCloseCircleFill>
+              <div
+                key="2"
+              >
+                <div
+                  className="label"
+                >
+                  <h2
+                    className="header"
+                  >
+                    Edit Task
+                  </h2>
+                </div>
+                <div
+                  className="NoteTypeContainer"
+                >
+                  <input
+                    className="inputText"
+                    defaultValue="Hello World 2"
+                    name="input_2"
+                    onChange={[Function]}
+                    placeholder="Edit task..."
+                    type="text"
+                  />
+                  <button
+                    className="ButtonSave"
+                    onClick={[Function]}
+                  >
+                    <span>
+                      Save
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ModalPortal>
+      </Portal>
+    </Modal>
+  </div>
+</ToDoEditModal>
+`;

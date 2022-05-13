@@ -1,0 +1,75 @@
+@import './main';
+
+.alert {
+    margin-bottom: 1rem;
+    height: 1.25rem;
+    display: grid;
+    width: 20%;
+    float: right;
+    align-items: center;
+    text-align: center;
+    font-size: 0.7rem;
+    border-radius: 0.25rem;
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+
+  }
+
+  .infomsg,
+.successmsg,
+.warningmsg,
+.errormsg {
+    font-size: 16px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+.infomsg {
+  color: #059;
+  background-color: #BEF;
+}
+.successmsg {
+  color: #270;
+  background-color: #DFF2BF;
+}
+.warningmsg {
+  color: #9F6000;
+  background-color: #FEEFB3;
+}
+.errormsg {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+  
+.dangerIcon{
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+.editErrorAlert, .editSuccessAlert{
+  height: 1.25rem;
+  float: right;
+  align-items: center;
+  text-align: center;
+  font-size: 0.7rem;
+  border-radius: 0.25rem;
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+}
+.errormsgEdit{
+  font-size: 16px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
+.successmsgEdit{
+  font-size: 16px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  color: #270;
+  background-color: #DFF2BF;
+}

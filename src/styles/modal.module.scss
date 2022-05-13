@@ -1,0 +1,91 @@
+@import './main';
+
+.modalContainer{
+    width: 100%;
+    max-width: 720px;
+    background: var(--background);
+    padding: 3rem;
+    position: relative;
+    border-radius: 0.25rem;
+}
+
+.closeButton {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    border: 0;
+    background: transparent;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: filter 0.2s;
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+  .overlayContainer {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inputText{
+  width: 100%;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 0 1.5rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #d7d7d7;
+  background: #e7e9ee;
+  &::placeholder {
+    color: var(--text-body);
+  }
+  & + input {
+    margin-top: 1rem;
+  }
+}
+
+.label { 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header{
+   
+        width: 100%;
+        font-size: 1.5rem;
+        color: var(--text-title);
+        margin-bottom: 1rem;
+      
+}
+.NoteTypeContainer {
+    margin: 0.5rem auto;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.ButtonSave{
+    width: 20%;
+    height: 4rem;
+    background: var(--red);
+    color: #d7d7d7;
+    font-weight: 800;
+    font-size: 16px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover{
+        filter: brightness(0.8);
+    }
+}

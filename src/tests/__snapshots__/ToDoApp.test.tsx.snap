@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing ToDoApp Component should display to Add ToDo task Component 1`] = `
+<div>
+  <div
+    className="container"
+  >
+    <div
+      className="content"
+    >
+      <header
+        className="header"
+      >
+        TO DO LIST
+      </header>
+      <div
+        className="inputDivContainer"
+      >
+        <input
+          className="inputContainer"
+          id="addToDoInput"
+          onChange={[Function]}
+          placeholder="Title"
+          value=""
+        />
+        <button
+          className="addButton"
+          id="addButton"
+          onClick={[Function]}
+          type="submit"
+        >
+          TO DO
+        </button>
+        <button
+          className="clearAllButton"
+          onClick={[Function]}
+          type="submit"
+        >
+          CLEAR ALL
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

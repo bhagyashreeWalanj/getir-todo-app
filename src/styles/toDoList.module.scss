@@ -1,0 +1,100 @@
+@import './main';
+
+
+.container{
+    margin-top: 2rem;
+    background: var(--background);
+}
+
+.table{
+    width:100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-spacing: 0 0.5rem;
+    border: 1px solid #d7d7d7;
+    border-radius: 0.25rem;
+}
+.thead{
+    color: var(--text-title);
+    font-weight: 400;
+    padding: 1rem 2rem;
+    text-align: left;
+    line-height: 1.5rem;
+  }
+
+td {
+    padding: 1rem 2rem;
+    // color: var(--text-body);
+    border-radius: 0.25rem;
+    font-size: 16px;
+  }
+  tr{
+    &:hover{
+      background-color: #d7d7d7;
+    }
+  }
+  
+
+.options{
+display: flex;
+  gap: 0.5rem;
+}
+
+.ToDo__update{
+      font-size: 1rem;
+  color: var(--green);
+  // background: var(--green);
+  // border: 0;
+  // padding: 0 1rem;
+  border-radius: 0.25rem;
+  width: 2rem;
+  height: 3rem;
+  cursor: pointer;
+  transition : filter 0.2s;
+  &:disabled{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
+
+  &:hover{
+    filter: brightness(0.7);
+    content: 'edit';
+  }
+}
+
+.ToDo__delete{
+  // background: var(--red);
+  // font-size: 1rem;
+  // border: 0;
+  // padding: 0 1rem;
+  // color: #fff;
+  color: var(--red);
+  width: 2rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  height: 3rem;
+  &:hover{
+    filter: brightness(0.7);
+  }
+}
+
+.strike {
+  text-decoration: line-through;
+  color: var(--text-body);
+}
+
+.ToDo__checkbox, .ToDo__checkbox_completed{
+  width: 2rem;
+  height: 1.20rem;
+  cursor: pointer;
+}
+.taskHeader{
+  font-weight: 600;
+  
+}
+.taskComplete{
+  //border: 1px solid #999999;
+ // background-color: #cccccc;
+  color: #666666;
+}

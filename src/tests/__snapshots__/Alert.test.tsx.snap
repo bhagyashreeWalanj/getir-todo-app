@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Alert component should display to Alert Component 1`] = `
+<div
+  className="alert"
+>
+  <p
+    className="successmsg"
+    id="alertDiv"
+  >
+    <TiTick />
+     
+    SUCCESS : DONE
+  </p>
+</div>
+`;
