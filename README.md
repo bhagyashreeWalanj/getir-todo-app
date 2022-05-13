@@ -1,46 +1,137 @@
-# Getting Started with Create React App
+<!-- ![Tests](https://github.com/cakirilker/a1-car-app/workflows/Tests/badge.svg) -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Build and Deploy](https://github.com/cakirilker/a1-car-app/workflows/Build%20and%20Deploy/badge.svg)
 
-## Available Scripts
+# Getir Frontend Code Challenge
 
-In the project directory, you can run:
+> This is an implemenation of the to-do app for Getir code challenge.
 
-### `npm start`
+## Project information
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Developed using React,Typescript, Redux and Redux-Saga.
+- Tested using Jest and Enzyme.
+- React Version `^16.13.0`
+- Node version `v14.17.3` (LTS)
+- Running Application available on [Netlify](https://getir-todo-bhagyashree.netlify.app/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Project structure
 
-### `npm test`
+- `src` Base app files.
+- `src/actions` All the redux code. constants, types, interfaces and actions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `src/components` Reusable components, in this case TodoList
 
-### `npm run build`
+  - `src/components/TodoList` Implementation of the TodoList component and its
+    sub-components.
+  - `src/components/TodoApp` Implementation of the Todo create and Add new component
+  - `src/components/TodoAppEditModal` Implementation of the Todo Edit Modal using React-Modal library
+  - `src/components/Alert` Implementation of Alert component to show error/success notification
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `src/.containers` redux container to map all actions and store
+- `src/model` Interface for todo
+- `src/store` Implementation of mock server details and methods and Creation of the store
+- `src/reducers` Root reducer and component reducers
+- `src/sagas` Implementation of Root saga and other sagas
+- `src/tests` Folder for tests files,
+- `src/styles` folder for scss files
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technical Documentation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Users can able to add a new task to their to-do list. (clickable `TO DO` button)
+2. Users can able to list their tasks in the list.
+3. Tasks have two statuses like INCOMPLETE / COMPLETED.
+4. Users must be able to change the status of the tasks By checkbox feature.
+5. User can change the task name by edit feature
+6. Completed tasks are shown as a separate list below Incomplete tasks.
+7. User can remove the task by Remove button feature.
+8. User can clear the task list by clear all button feature.
 
-### `npm run eject`
+## Database :
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+I tried to use json-server for backend implementation :
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```zsh
+# (JSON-server : https://my-json-server.typicode.com/bhagyashreeWalanj/tasks/tasks)
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- but for real time changes , I have been using mockapi server for create, update and delete operations of to-do list
+- [MockApi](https://mockapi.io/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```zsh
+# (mockAPi : https://624b52c271e21eebbcf0b4ba.mockapi.io/tasks)
+```
 
-## Learn More
+## Sample mocked Json
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+[
+    {
+        "id": "1",
+        "title": "Hello World 1",
+        "createdAt": "01/05/2022",
+        "completed": true,
+    },
+    {
+        "id": "2",
+        "title": "Hello World 2",
+        "createdAt": "02/05/2022",
+        "completed": true,
+    },
+]
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+
+## Third Party Libraries
+
+- [TypeScript](https://www.typescriptlang.org/) for static type checking.
+- [React / create-react-app](https://github.com/facebook/create-react-app)
+- [Redux](https://redux.js.org/)
+- [Redux-saga](https://redux-saga.js.org/)
+- [Jest](https://jestjs.io/) for testing
+- [Enzyme](https://airbnb.io/enzyme/) for testing
+- [enzyme-adapter-react-16](https://enzymejs.github.io/enzyme/docs/installation/react-16.html) an adapter between React and Enzyme. This will be executed before running the tests.
+
+- [React Icons](https://react-icons.github.io/react-icons) for icons
+- [classnames](https://jedwatson.github.io/classnames/) for for conditionally joining classNames together.
+- [sass](https://sass-lang.com/install) for CSS extension
+- [Axios](https://github.com/axios/axios) for api calls.
+- [MockApi](https://mockapi.io/) for mocked data
+
+## TODO's
+
+If I had a little more time to invest on this code assignment, I would probably
+focus on:
+
+- Extract some code into components, for example pending tasks and completed tasks
+- Add more coverage for the sagas tests
+- On clear button, clears current tasks from the UI, and doesn't affect actual mock data. As soon as You refresh the page, it displays all tasks. Note: I have used the redux for clear all method.
+
+## Project commands
+
+### Install dependencies
+
+```zsh
+npm i
+```
+
+### Running the project
+
+```zsh
+# (make sure dependencies have been installed before.)
+npm start
+```
+
+### Executing tests
+
+This project contains an extensive suite of tests and makes use of [Jest](https://jestjs.io/) and [Enzyme](https://github.com/airbnb/enzyme).
+
+Run all tests by executing.
+
+```zsh
+# (make sure dependencies have been installed before.)
+npm test
+```
+
+```zsh
+npm run test -- -u
+```

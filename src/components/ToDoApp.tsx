@@ -27,9 +27,9 @@ const ToDoApp = ({
 
   // Method to add new task
   const handleCreateToDo = (title: string) => {
-    if (title != '') {
+    if (title !== '') {
       createToDo(title, tasks)
-      if (error != null) {
+      if (error !== null) {
         showAlert(true, 'danger', error)
         return
       } else {
@@ -55,9 +55,7 @@ const ToDoApp = ({
   return (
     <div>
       <div className={styles.container}>
-        {alert.show && (
-          <Alert {...alert} removeAlert={showAlert} list={tasks} />
-        )}
+        {alert.show && <Alert {...alert} removeAlert={showAlert} />}
         <div className={styles.content}>
           <header className={styles.header}>TO DO LIST</header>
           <div className={styles.inputDivContainer}>

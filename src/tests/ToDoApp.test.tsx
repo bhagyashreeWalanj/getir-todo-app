@@ -11,14 +11,12 @@ describe('Testing ToDoApp Component', () => {
 
   const taskList: ITask[] = [
     {
-      //userId: 1,
       id: '1',
       title: 'Hello World 1',
       createdAt: '01/05/2022',
       completed: true,
     },
     {
-      // userId: 1,
       id: '2',
       title: 'Hello World 2',
       createdAt: '01/05/2022',

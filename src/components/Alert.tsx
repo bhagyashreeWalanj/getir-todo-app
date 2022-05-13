@@ -8,16 +8,15 @@ export interface IToDoAlert {
   type: string
   msg: string
   removeAlert: () => void
-  list: any
 }
 
-const Alert = ({ type, msg, removeAlert, list }: IToDoAlert) => {
+const Alert = ({ type, msg, removeAlert }: IToDoAlert) => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       removeAlert()
     }, 3000)
     return () => clearTimeout(timeout)
-  }, [list])
+  })
 
   return (
     <div

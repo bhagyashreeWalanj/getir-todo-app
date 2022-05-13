@@ -59,7 +59,7 @@ const ToDoEditModal = ({
             onRequestClose()
           }}
         />
-        {alert.show && <Alert {...alert} removeAlert={showAlert} list={[]} />}
+        {alert.show && <Alert {...alert} removeAlert={showAlert} />}
 
         {!!taskName && (
           <div key={EditTaskId}>

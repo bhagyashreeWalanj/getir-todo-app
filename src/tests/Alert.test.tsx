@@ -8,7 +8,7 @@ describe('Testing Alert component', () => {
   const type = 'success'
 
   const wrapper = shallow(
-    <Alert type={type} msg={msg} removeAlert={removeAlert} list={[]} />,
+    <Alert type={type} msg={msg} removeAlert={removeAlert} />,
   )
 
   it('should display to Alert Component', () => {
@@ -29,7 +29,6 @@ describe('Testing Alert component', () => {
         type={'success-edit'}
         msg={'SUCCESS : DONE'}
         removeAlert={removeAlert}
-        list={[]}
       />,
     )
 
@@ -43,7 +42,6 @@ describe('Testing Alert component', () => {
         type={'danger'}
         msg={'ERROR : EXCEPTION'}
         removeAlert={removeAlert}
-        list={[]}
       />,
     )
 
@@ -57,7 +55,6 @@ describe('Testing Alert component', () => {
         type={'danger-edit'}
         msg={'ERROR : EXCEPTION'}
         removeAlert={removeAlert}
-        list={[]}
       />,
     )
 

@@ -5,6 +5,7 @@ import { ITask } from '../models/ITask'
 import { AiFillDelete } from 'react-icons/ai'
 import { FiEdit } from 'react-icons/fi'
 import ToDoEditModal from './ToDoEditModal'
+import Alert from './Alert'
 
 export interface IToDoList {
   tasks: ITask[]
@@ -18,6 +19,11 @@ export function ToDoList({ tasks, removeTask, editTask }: IToDoList) {
   const [editID, setEditID] = useState('')
   const [name, setName] = useState('')
   const [isNewTaskModalOpen, setIsNewTaskModalOpen] = useState(false)
+  const [alert, setAlert] = useState({ show: false, msg: '', type: '' })
+
+  const showAlert = (show = false, type = '', msg = '') => {
+    setAlert({ show, type, msg })
+  }
 
   function handleCloseNewTaskModal() {
     setIsNewTaskModalOpen(false)
@@ -28,6 +34,7 @@ export function ToDoList({ tasks, removeTask, editTask }: IToDoList) {
 
   const handleRemoveTask = (id: string) => {
     removeTask(id, tasks)
+    showAlert(true, 'success', 'Item Removed Successfully!!')
   }
 
   const handleEditTask = (id: string, title: string) => {
@@ -55,6 +62,7 @@ export function ToDoList({ tasks, removeTask, editTask }: IToDoList) {
 
   return (
     <div className={styles.container}>
+      {alert.show && <Alert {...alert} removeAlert={showAlert} />}
       {!tasks ? (
         <div className={styles.noDataDiv}>No Data!</div>
       ) : (
@@ -72,7 +80,7 @@ export function ToDoList({ tasks, removeTask, editTask }: IToDoList) {
 
             <tbody>
               <tr>
-                <td className={styles.taskHeader}>Pending Tasks</td>
+                <td className={styles.taskHeader}>Incomplete Tasks</td>
               </tr>
               {todos.length === 0 ? (
                 <tr className={styles.noDataDiv}>
@@ -117,7 +125,7 @@ export function ToDoList({ tasks, removeTask, editTask }: IToDoList) {
                         [styles.strike]: pendingTask.completed,
                       })}
                     >
-                      {pendingTask.completed ? 'COMPLETE' : 'PENDING'}
+                      {pendingTask.completed ? 'COMPLETE' : 'INCOMPLETE'}
                     </td>
 
                     <td>
@@ -184,7 +192,7 @@ export function ToDoList({ tasks, removeTask, editTask }: IToDoList) {
                       {completedTask.createdAt}
                     </td>
                     <td className={styles.taskComplete}>
-                      {completedTask.completed ? 'COMPLETED' : 'PENDING'}
+                      {completedTask.completed ? 'COMPLETED' : 'INCOMPLETE'}
                     </td>
                     <td>
                       <div className={styles.options}>

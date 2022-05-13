@@ -9,7 +9,7 @@ const initialState: ToDoState = {
   error: null
 };
 
-export default (state = initialState, action: ToDosTypes) => {
+const toDoReducer = (state = initialState, action: ToDosTypes) => {
   switch (action.type) {
     case constants.GET_TODOS_REQUEST:
       return {
@@ -87,3 +87,5 @@ export default (state = initialState, action: ToDosTypes) => {
       };
   }
 };
+
+export default toDoReducer;

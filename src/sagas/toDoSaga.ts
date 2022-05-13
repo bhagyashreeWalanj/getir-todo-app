@@ -72,11 +72,8 @@ export function* removeToDOFn (action: AnyAction): any{
   
   try{
        yield call(deleteToDo, action.id);
-       const updatedTasks = action.tasks.filter((u: any) => {
-        if(u.id !== action.id){
-          return u;
-        }});
-       yield put(ACTIONS.removeToDoSuccess({ tasks: updatedTasks }));
+      const updatedTasks = [...action.tasks].filter(task =>  task.id !== action.id);
+      yield put(ACTIONS.removeToDoSuccess({ tasks: updatedTasks }));
 
   }catch (e){
     let errorMessage = "Failed to do something exceptional";
